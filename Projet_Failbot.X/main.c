@@ -4,6 +4,7 @@
 #include "ChipConfig.h"
 #include "IO.h"
 #include "Timer.h"
+#include "PWM.h"
 
 int main (void){
 /***************************************************************************************************/
