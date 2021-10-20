@@ -1,7 +1,3 @@
-/*
-* File:   IO.c
-*/
-
 #include <xc.h>
 #include "IO.h"
 
@@ -19,11 +15,14 @@ void InitIO()
     //********** Configuration des sorties : _TRISxx = 0 ********************************
     // LED
     _TRISC10 = 0;  // LED Orange
-    _TRISG6 = 0; //LED Blanche
+    _TRISG6 = 0; // LED Blanche
     _TRISG7 = 0; // LED Bleue
-    _TRISB14 = 0; //moteur1 IN1
-    _TRISB15 = 0; //moteur2 IN2
-    
-    // Moteurs 
-    //********** Configuration des entrées : _TRISxx = 1 ********************************   
+
+    // Moteurs     
+    _TRISB14 = 0; //Moteur 1 IN1     
+    _TRISB15 = 0; //Moteur 1 IN2
+    _TRISB12 = 0; //Moteur 2 IN1     
+    _TRISB13 = 0; //Moteur 2 IN2
+
+    //********** Configuration des entrées : _TRISxx = 1 ********************************  
 }
