@@ -5,7 +5,7 @@
 #include "ToolBox.h"
 
 #define PWMPER 40.0
-unsigned char acceleration = 20;
+float acceleration = 2;
 
 void InitPWM(void)
 {
@@ -113,4 +113,16 @@ MOTEUR_GAUCHE_H_IO_OUTPUT = 1; //Mise à 1 de la pin
 MOTEUR_GAUCHE_L_PWM_ENABLE = 1; //Pilotage de la pin en mode PWM
 }
 MOTEUR_GAUCHE_DUTY_CYCLE = Abs(robotState.vitesseGaucheCommandeCourante) * PWMPER;
+}
+
+void PWMSetSpeedConsigne(float vitesseEnPourcentage, unsigned char moteur)
+{
+    if (moteur == MOTEUR_GAUCHE)
+    {
+        robotState.vitesseGaucheConsigne = vitesseEnPourcentage;
+    }
+    else if (moteur == MOTEUR_DROIT)
+    {
+        robotState.vitesseDroiteConsigne = vitesseEnPourcentage;
+    }
 }
