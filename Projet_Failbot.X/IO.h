@@ -12,8 +12,8 @@ void InitIO();
 //Définitions des moteurs
 #define MOTEUR1_IN1 _LATB14
 #define MOTEUR1_IN2 _LATB15
-#define MOTEUR2_IN1 _LATB12
-#define MOTEUR2_IN2 _LATB13
+#define MOTEUR2_IN1 _LATC6
+#define MOTEUR2_IN2 _LATC7
 
 //Configuration spécifique du moteur gauche
 #define MOTEUR_GAUCHE_H_IO_OUTPUT MOTEUR1_IN1
