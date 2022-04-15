@@ -198,6 +198,12 @@ while(1){
         {
             LED_BLANCHE = !LED_BLANCHE;
         }
+        
     }
+    
+    //SendMessageDirect((unsigned char*) "Bonjour",7);
+    SendMessage((unsigned char*) "Bonjour",7);
+        __delay32(40000000);
+        
 }
 }
